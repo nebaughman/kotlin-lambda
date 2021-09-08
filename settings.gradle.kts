@@ -8,4 +8,4 @@
  */
 
 rootProject.name = "kotlin-lambda"
-include("app", "list", "utilities")
+include("lambdas", "stack")
