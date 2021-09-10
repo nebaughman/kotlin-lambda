@@ -4,7 +4,7 @@
 
 plugins {
     // Apply the common convention plugin for shared build configuration between library and application projects.
-    id("kotlin.lambda.kotlin-common-conventions")
+    id("example.lambda.kotlin-common-conventions")
 
     // Apply the java-library plugin for API and implementation separation.
     `java-library`

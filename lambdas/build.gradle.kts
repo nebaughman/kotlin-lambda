@@ -1,5 +1,5 @@
 plugins {
-    id("kotlin.lambda.kotlin-application-conventions")
+    id("example.lambda.kotlin-application-conventions")
     kotlin("plugin.serialization") version "1.5.20"
     id("com.github.johnrengelman.shadow") version "7.0.0"
 }
@@ -11,6 +11,6 @@ dependencies {
 }
 
 application {
-    // Define the main class for the application.
-    //mainClass.set("kotlin.lambda.app.AppKt")
+    // TODO: there is no main in this module but shadowJar required one
+    mainClass.set("example.lambda.AppKt")
 }
