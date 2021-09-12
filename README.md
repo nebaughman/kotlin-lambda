@@ -1,4 +1,4 @@
-# kotlin-labmda
+# kotlin-lambda
 
 Test project to try out Kotlin running on AWS Lambda deployed via CDK.
 
