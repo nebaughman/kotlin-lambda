@@ -8,6 +8,7 @@ dependencies {
     implementation("software.amazon.awscdk:core:${cdkVersion}")
     implementation("software.amazon.awscdk:lambda:${cdkVersion}")
     implementation("software.amazon.awscdk:apigateway:${cdkVersion}")
+    implementation("software.amazon.awscdk:dynamodb:${cdkVersion}")
 }
 
 application {

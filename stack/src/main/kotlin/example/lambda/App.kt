@@ -1,11 +1,9 @@
 package example.lambda
 
 import software.amazon.awscdk.core.App
-import software.amazon.awscdk.core.Environment
 import software.amazon.awscdk.core.StackProps
 
 fun main() {
-  val awsAccount = System.getenv("AWS_ACCOUNT") ?: throw Exception("Missing AWS_ACCOUNT env var")
 
   val app = App()
 
@@ -13,12 +11,15 @@ fun main() {
     app,
     "sample-stack",
     StackProps.builder()
+      /* environment can be obtained from standard ~/.aws config
       .env(
         Environment.builder()
           .account(awsAccount)
           .region("us-east-2")
           .build()
-      ).build()
+      )
+      */
+      .build()
   )
 
   app.synth()
