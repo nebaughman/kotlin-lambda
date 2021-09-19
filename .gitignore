@@ -6,3 +6,5 @@ build
 
 .idea
 cdk.out
+.aws-sam
+
