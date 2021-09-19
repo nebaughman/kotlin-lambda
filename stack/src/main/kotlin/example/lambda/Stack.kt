@@ -24,7 +24,6 @@ class Stack(
       .timeout(Duration.seconds(5))
       .memorySize(512)
       .runtime(Runtime.JAVA_8_CORRETTO)
-      // .role() // TODO: define a role with AWSLambdaBasicExecutionRole + PutItem on the db
       .build()
     // api gateway
     val api = RestApi.Builder.create(this, "sample-api")
@@ -51,5 +50,6 @@ class Stack(
       )
       .billingMode(BillingMode.PAY_PER_REQUEST)
       .build()
+    table.grantReadWriteData(handler) // lambda can write items
   }
 }
