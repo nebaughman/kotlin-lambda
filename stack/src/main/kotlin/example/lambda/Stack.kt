@@ -2,6 +2,7 @@ package example.lambda
 
 import software.amazon.awscdk.core.Construct
 import software.amazon.awscdk.core.Duration
+import software.amazon.awscdk.core.RemovalPolicy
 import software.amazon.awscdk.core.Stack as AwsStack
 import software.amazon.awscdk.core.StackProps
 import software.amazon.awscdk.services.apigateway.LambdaIntegration
@@ -49,6 +50,7 @@ class Stack(
         .build()
       )
       .billingMode(BillingMode.PAY_PER_REQUEST)
+      .removalPolicy(RemovalPolicy.DESTROY) // cdk destroy will remove table // TODO: not for production
       .build()
     table.grantReadWriteData(handler) // lambda can write items
   }
